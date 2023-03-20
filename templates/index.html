@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    <h1>Search</h1>
+    <form method="POST" action="/search" enctype="multipart/form-data">
+        <label>Search phrase:</label>
+        <input type="text" name="search_phrase"><br>
+
+        <label>URL prefix:</label>
+        <input type="text" name="url_prefix"><br>
+
+        <label>URL list:</label>
+        <input type="file" name="url_list"><br>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
