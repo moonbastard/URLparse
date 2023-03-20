@@ -2,3 +2,4 @@ Flask
 beautifulsoup4
 openpyxl
 requests
+gunicorn
