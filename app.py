@@ -48,8 +48,8 @@ def search():
 
     # Iterate over each URL
     for url in urls:
-        # Make a request to the URL
-        res = requests.get(url)
+         # Make a request to the URL with a 10-second timeout
+        res = requests.get(url, timeout=10)   
 
         # Parse the HTML content
         soup = BeautifulSoup(res.text, 'html.parser')
