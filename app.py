@@ -14,7 +14,7 @@ app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB max file size
-app.config['TIMEOUT'] = 120  # 2 minute timeout
+app.config['TIMEOUT'] = 180  # 2 minute timeout
 
 @app.route('/')
 def index():
