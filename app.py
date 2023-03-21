@@ -5,6 +5,16 @@ from bs4 import BeautifulSoup
 import openpyxl
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+app.config['PERMANENT_SESSION_LIFETIME'] = 1800
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['JSON_SORT_KEYS'] = False
+app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB max file size
+app.config['TIMEOUT'] = 120  # 2 minute timeout
 
 @app.route('/')
 def index():
